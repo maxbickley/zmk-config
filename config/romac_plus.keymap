@@ -33,13 +33,13 @@
 // --------------------------
 // | BT_CLR |  HOME |  PGUP |
 // | _      |  END  |  PGDN |
-// | _      |  _    |  _    |
+// | _      |  _    |  BTCLR    |
 // | _      |  _    |  _    |
 // --------------------------
              bindings = <
      &bt BT_CLR &kp HOME &kp PGUP 
      &trans &kp END  &kp PGDN 
-     &trans &trans   &trans
+     &trans &trans   & BT_CLR
      &trans &trans   &trans
              >;
 
