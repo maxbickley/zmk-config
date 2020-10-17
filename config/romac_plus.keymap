@@ -39,7 +39,7 @@
              bindings = <
      &bt BT_CLR &kp HOME &kp PGUP 
      &trans &kp END  &kp PGDN 
-     &trans &trans   & BT_CLR
+     &trans &trans   &bt BT_CLR
      &trans &trans   &trans
              >;
 
