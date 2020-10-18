@@ -47,7 +47,7 @@
      &tog BROWSE  &tog GAME    &tog SKTUP 
      &tog OBS     &tog NUM     &trans
      &bt BT_SEL 0 &bt BT_SEL 1 &trans
-     &bt BT_CLR   &trans       &trans
+     &bt BT_CLR   &trans       &lt UTIL RET
              >;
 
              sensor-bindings = <&inc_dec_kp A B>;
@@ -63,7 +63,7 @@
      &kp NUM_1 &kp NUM_2 &kp NUM_3
      &kp NUM_4 &kp NUM_5 &kp NUM_6
      &kp NUM_7 &kp NUM_8 &kp NUM_9
-     &kp LGUI  &kp GRAV  &trans
+     &kp LGUI  &kp GRAV  &lt UTIL RET
              >;
 
             sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD>;
@@ -79,7 +79,7 @@
      &kp SPC &kp M   &kp P
      &kp T   &kp Z   &kp Q
      &kp R   &kp B   &kp UNDO
-     &kp ESC &mo NUM &trans
+     &kp ESC &mo NUM &lt UTIL RET
              >;
 
              sensor-bindings = <&inc_dec_kp A B>;
@@ -95,7 +95,7 @@
      &bt BT_CLR   &kp HOME &kp PGUP 
      &trans       &kp END  &kp PGDN 
      &bt BT_SEL 0 &bt BT_SEL 1   &trans
-     &bt BT_CLR   &trans   &trans
+     &bt BT_CLR   &trans   &lt UTIL RET
              >;
 
              sensor-bindings = <&inc_dec_kp A B>;
@@ -111,7 +111,7 @@
      &kp NUM_1 &kp NUM_2 &kp NUM_3
      &kp NUM_4 &kp NUM_5 &kp NUM_6
      &kp NUM_7 &kp NUM_8 &kp NUM_9
-     &trans   &kp NUM_0   &trans
+     &trans   &kp NUM_0   &lt UTIL RET
              >;
 
              sensor-bindings = <&inc_dec_kp A B>;
