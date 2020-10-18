@@ -54,32 +54,32 @@
          };
          game_layer {
 // --------------------------
-// | BROWSE |  GAME |  SKTUP |
-// | GAME   |  OBS  |  NUM   |
-// | BT_1   |  BT_2 |  _     |
-// | BTCLR  |  _    |  _     |
+// | 1   |  2   |  3 |
+// | 4   |  5   |  6 |
+// | 7   |  8   |  9 |
+// | GUI |  GRV |  _ |
 // --------------------------
              bindings = <
-     &bt BT_CLR   &kp HOME &kp PGUP 
-     &trans       &kp END  &kp PGDN 
-     &bt BT_SEL 0 &bt BT_SEL 1   &trans
-     &bt BT_CLR   &trans   &trans
+     &kp NUM_1 &kp NUM_2 &kp NUM_3
+     &kp NUM_4 &kp NUM_5 &kp NUM_6
+     &kp NUM_7 &kp NUM_8 &kp NUM_9
+     &kp LGIU  &kp GRAV  &trans
              >;
 
-             sensor-bindings = <&inc_dec_kp A B>;
+            sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD>;
          };
          sketchup_layer {
 // --------------------------
-// | BROWSE |  GAME |  SKTUP |
-// | GAME   |  OBS  |  NUM   |
-// | BT_1   |  BT_2 |  _     |
-// | BTCLR  |  _    |  _     |
+// | SPACE |  M   |  P    |
+// | T     |  Z   |  Q    |
+// | R     |  B   |  UNDO |
+// | ESC   |  NUM |  _    |
 // --------------------------
              bindings = <
-     &bt BT_CLR   &kp HOME &kp PGUP 
-     &trans       &kp END  &kp PGDN 
-     &bt BT_SEL 0 &bt BT_SEL 1   &trans
-     &bt BT_CLR   &trans   &trans
+     &kp SPC &kp M   &kp P
+     &kp T   &kp Z   &kp Q
+     &kp R   &kp B   &kp UNDO
+     &kp ESC &mo NUM &trans
              >;
 
              sensor-bindings = <&inc_dec_kp A B>;
@@ -102,15 +102,15 @@
          };
          num_layer {
 // --------------------------
-// | BROWSE |  GAME |  SKTUP |
-// | GAME   |  OBS  |  NUM   |
-// | BT_1   |  BT_2 |  _     |
-// | BTCLR  |  _    |  _     |
+// | 1   |  2   |  3 |
+// | 4   |  5   |  6 |
+// | 7   |  8   |  9 |
+// | TAB |  0   |  _ |
 // --------------------------
              bindings = <
-     &bt BT_CLR   &kp HOME &kp PGUP 
-     &trans       &kp END  &kp PGDN 
-     &bt BT_SEL 0 &bt BT_SEL 1   &trans
+     &kp NUM_1 &kp NUM_2 &kp NUM_3
+     &kp NUM_4 &kp NUM_5 &kp NUM_6
+     &kp NUM_7 &kp NUM_8 &kp NUM_9
      &bt BT_CLR   &trans   &trans
              >;
 
