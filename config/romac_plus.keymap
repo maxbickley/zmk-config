@@ -8,8 +8,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT 0
+#define BROWSE 0
 #define UTIL    1
+#define GAME    2
+#define SKTUP   3
+#define OBS     4
+#define NUM     5
 
 / {
     keymap {
@@ -34,16 +38,80 @@
 
          util_layer {
 // --------------------------
-// | BT_CLR |  HOME |  PGUP |
-// | _      |  END  |  PGDN |
-// | _      |  _    |  BTCLR    |
-// | _      |  _    |  _    |
+// | BROWSE |  GAME |  SKTUP |
+// | OBS    |  NUM  |  _     |
+// | BT_1   |  BT_2 |  _     |
+// | BTCLR  |  _    |  _     |
 // --------------------------
              bindings = <
-     &bt BT_CLR &kp HOME &kp PGUP 
-     &trans &kp END  &kp PGDN 
-     &trans &trans   &bt BT_CLR
-     &trans &trans   &trans
+     &tog BROWSE  &tog GAME    &tog SKTUP 
+     &tog OBS     &tog NUM     &trans
+     &bt BT_SEL 0 &bt BT_SEL 1 &trans
+     &bt BT_CLR   &trans       &trans
+             >;
+
+             sensor-bindings = <&inc_dec_kp A B>;
+         };
+         game_layer {
+// --------------------------
+// | BROWSE |  GAME |  SKTUP |
+// | GAME   |  OBS  |  NUM   |
+// | BT_1   |  BT_2 |  _     |
+// | BTCLR  |  _    |  _     |
+// --------------------------
+             bindings = <
+     &bt BT_CLR   &kp HOME &kp PGUP 
+     &trans       &kp END  &kp PGDN 
+     &bt BT_SEL 0 &bt BT_SEL 1   &trans
+     &bt BT_CLR   &trans   &trans
+             >;
+
+             sensor-bindings = <&inc_dec_kp A B>;
+         };
+         sketchup_layer {
+// --------------------------
+// | BROWSE |  GAME |  SKTUP |
+// | GAME   |  OBS  |  NUM   |
+// | BT_1   |  BT_2 |  _     |
+// | BTCLR  |  _    |  _     |
+// --------------------------
+             bindings = <
+     &bt BT_CLR   &kp HOME &kp PGUP 
+     &trans       &kp END  &kp PGDN 
+     &bt BT_SEL 0 &bt BT_SEL 1   &trans
+     &bt BT_CLR   &trans   &trans
+             >;
+
+             sensor-bindings = <&inc_dec_kp A B>;
+         };
+         obs_layer {
+// --------------------------
+// | BROWSE |  GAME |  SKTUP |
+// | GAME   |  OBS  |  NUM   |
+// | BT_1   |  BT_2 |  _     |
+// | BTCLR  |  _    |  _     |
+// --------------------------
+             bindings = <
+     &bt BT_CLR   &kp HOME &kp PGUP 
+     &trans       &kp END  &kp PGDN 
+     &bt BT_SEL 0 &bt BT_SEL 1   &trans
+     &bt BT_CLR   &trans   &trans
+             >;
+
+             sensor-bindings = <&inc_dec_kp A B>;
+         };
+         num_layer {
+// --------------------------
+// | BROWSE |  GAME |  SKTUP |
+// | GAME   |  OBS  |  NUM   |
+// | BT_1   |  BT_2 |  _     |
+// | BTCLR  |  _    |  _     |
+// --------------------------
+             bindings = <
+     &bt BT_CLR   &kp HOME &kp PGUP 
+     &trans       &kp END  &kp PGDN 
+     &bt BT_SEL 0 &bt BT_SEL 1   &trans
+     &bt BT_CLR   &trans   &trans
              >;
 
              sensor-bindings = <&inc_dec_kp A B>;
