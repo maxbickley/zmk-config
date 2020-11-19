@@ -10,10 +10,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define BROWSE  0
-#define NUM     1
-#define GAME    2
-#define SKTUP   3
-#define OBS     4
+#define GAME     1
+#define SKTUP    2
+#define OBS   3
+#define NUM     4
 #define UTIL    5
 
 / {
@@ -24,13 +24,13 @@
 // --------------------------
 // | COPY   |   UP   |  PASTE |
 // | LEFT   |  DOWN  |  RIGHT |
-// | HOME   |  PGUP  |  END   |
+// | WSL    |  PGUP  |  WSR   |
 // | MUTE   |  PGDN  |  ENT/UT|
 // --------------------------
             bindings = <
     &kp COPY   &kp UARW &kp PSTE
     &kp LARW   &kp DARW &kp RARW 
-    &kp HOME   &kp PGUP &kp END 
+    &kp LG(LC(LEFT))   &kp PGUP &kp LG(LC(RIGHT)) 
     &cp M_MUTE &kp PGDN &lt UTIL RET 
             >;
 
@@ -76,10 +76,10 @@
 // | BTCLR  |  _    |  _     |
 // --------------------------
              bindings = <
-     &bt BT_CLR   &kp HOME &kp PGUP 
-     &trans       &kp END  &kp PGDN 
-     &bt BT_SEL 0 &bt BT_SEL 1   &trans
-     &bt BT_CLR   &trans   &lt UTIL RET
+     &kp NUM_1 &kp NUM_2 &kp NUM_3
+     &kp NUM_4 &kp NUM_5 &kp NUM_6
+     &kp NUM_7 &kp NUM_8 &kp NUM_9
+     &kp TAB   &kp NUM_0   &lt UTIL RET
              >;
 
              sensor-bindings = <&inc_dec_kp A B>;
@@ -92,10 +92,10 @@
 // | TAB |  0   |  _ |
 // --------------------------
              bindings = <
-     &kp NUM_1 &kp NUM_2 &kp NUM_3
-     &kp NUM_4 &kp NUM_5 &kp NUM_6
-     &kp NUM_7 &kp NUM_8 &kp NUM_9
-     &trans   &kp NUM_0   &lt UTIL RET
+     &kp N1 &kp N2 &kp N3
+     &kp N4 &kp N5 &kp N6
+     &kp N7 &kp N8 &kp N9
+     &kp TAB   &kp N0   &lt UTIL RET
              >;
 
              sensor-bindings = <&inc_dec_kp A B>;
