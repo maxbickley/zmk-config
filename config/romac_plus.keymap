@@ -128,11 +128,11 @@
              bindings = <
      &kp LBKT      &kp PGUP     &kp RBKT
      &kp LC(COMMA) &kp PGDN     &kp LC(DOT)
-     &kp LEFT      &kp LA(UP)   &kp BSLH
-     &kp DEL       &kp LA(DOWN) &lt UTIL RET
+     &kp LEFT      &kp LA(UP)   &kp RIGHT
+     &kp DEL       &kp LA(DOWN) &lt UTIL BSLH
              >;
 
-             sensor-bindings = <&inc_dec_kp PLUS MINS>;
+             sensor-bindings = <&inc_dec_kp PLUS MINUS>;
          };
          util_layer {
 // --------------------------
