@@ -35,7 +35,7 @@
     &cp M_MUTE &kp PGDN &lt UTIL RET 
             >;
 
-            sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD>;
+            sensor-bindings = <&inc_dec_cp M_VOLD M_VOLU>;
         };
          game_layer {
 // --------------------------
@@ -115,7 +115,7 @@
      &kp F5       &kp DOWN     &lt UTIL RET
              >;
 
-             sensor-bindings = <&inc_dec_kp A B>;
+             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
          };
          util_layer {
 // --------------------------
