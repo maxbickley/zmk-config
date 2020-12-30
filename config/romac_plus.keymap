@@ -127,7 +127,7 @@
 // --------------------------
              bindings = <
      &kp LBKT      &kp PGUP     &kp RBKT
-     &kp LC(COMMA) &kp PGDN     &kp LC(DOT)
+     &kp LS(COMMA) &kp PGDN     &kp LS(DOT)
      &kp LEFT      &kp LA(UP)   &kp RIGHT
      &kp DEL       &kp LA(DOWN) &lt UTIL BSLH
              >;
