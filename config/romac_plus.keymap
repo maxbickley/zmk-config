@@ -108,8 +108,8 @@
 // | BTCLR  |  _    |  _     |
 // --------------------------
              bindings = <
-     &tog BROWSE  &tog GAME    &tog SKTUP 
-     &tog OBS     &tog NUM     &trans
+     &to BROWSE  &to GAME    &to SKTUP 
+     &to OBS     &to NUM     &trans
      &bt BT_SEL 0 &bt BT_SEL 1 &ext_power EP_TOG
      &bt BT_CLR   &trans       &lt UTIL RET
              >;
