@@ -15,7 +15,8 @@
 #define OBS   3
 #define NUM     4
 #define KAT    5
-#define UTIL 6
+#define RV 6
+#define UTIL 7
 
 / {
     keymap {
@@ -111,22 +112,38 @@
              bindings = <
      &kp LC(BSPC) &kp KP_MINUS &kp LC(LS(P))
      &kp LC(RET)  &kp KP_PLUS  &kp LC(B)
-     &kp TILDE    &kp UP       &kp TAB
+     &kp GRAVE    &kp UP       &kp TAB
      &kp F5       &kp DOWN     &lt UTIL RET
              >;
 
              sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
          };
+         rv_layer {
+// ----------------------------
+// | [      |  PGUP  |       ] |
+// | CMP LT |  PGDN  | CMP RGT |
+// | LEFT   |  ALT U | RIGHT   |
+// | DEL    |  ALT D |   \     |
+// --------------------------
+             bindings = <
+     &kp LBKT      &kp PGUP     &kp RBKT
+     &kp LC(COMMA) &kp PGDN     &kp LC(DOT)
+     &kp LEFT      &kp LA(UP)   &kp BSLH
+     &kp DEL       &kp LA(DOWN) &lt UTIL RET
+             >;
+
+             sensor-bindings = <&inc_dec_kp PLUS MINS>;
+         };
          util_layer {
 // --------------------------
 // | BROWSE |  GAME |  SKTUP |
-// | OBS    |  NUM  |  KAT   |
+// | RV     |  NUM  |  KAT   |
 // | BT_1   |  BT_2 |  EPTOG |
 // | BTCLR  |  _    |  _     |
 // --------------------------
              bindings = <
      &to BROWSE  &to GAME    &to SKTUP 
-     &to OBS     &to NUM     &to KAT
+     &to RV     &to NUM     &to KAT
      &bt BT_SEL 0 &bt BT_SEL 1 &ext_power EP_OFF
      &bt BT_CLR   &trans       &lt UTIL RET
              >;
